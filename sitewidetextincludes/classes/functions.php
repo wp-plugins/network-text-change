@@ -9,9 +9,9 @@ function set_swt_url( $base ) {
 	if( defined( 'WPMU_PLUGIN_URL' ) && defined( 'WPMU_PLUGIN_DIR' ) && file_exists( WPMU_PLUGIN_DIR . '/' . basename( $base ) ) ) {
 		$swt_url = trailingslashit( WPMU_PLUGIN_URL );
 	} elseif( defined( 'WP_PLUGIN_URL' ) && file_exists( WP_PLUGIN_DIR . '/site-wide-text-change/' . basename( $base ) ) ) {
-		$swt_url = trailingslashit( WP_PLUGIN_URL . '/site-wide-text-change' );
+		$swt_url = trailingslashit( WP_PLUGIN_URL . '/' . basename(dirname($base)));
 	} else {
-		$swt_url = trailingslashit( WP_PLUGIN_URL . '/site-wide-text-change' );
+		$swt_url = trailingslashit( WP_PLUGIN_URL . '/' . basename(dirname($base)));
 	}
 }
 
@@ -24,9 +24,9 @@ function set_swt_dir( $base ) {
 	if( defined( 'WPMU_PLUGIN_DIR' ) && file_exists( WPMU_PLUGIN_DIR . '/' . basename( $base ) ) ) {
 		$swt_dir = trailingslashit( WPMU_PLUGIN_DIR );
 	} elseif( defined( 'WP_PLUGIN_DIR' ) && file_exists( WP_PLUGIN_DIR . '/site-wide-text-change/' . basename( $base ) ) ) {
-		$swt_dir = trailingslashit( WP_PLUGIN_DIR . '/site-wide-text-change' );
+		$swt_dir = trailingslashit( WP_PLUGIN_DIR . '/' . basename(dirname($base)));
 	} else {
-		$swt_dir = trailingslashit( WP_PLUGIN_DIR . '/site-wide-text-change' );
+		$swt_dir = trailingslashit( WP_PLUGIN_DIR . '/' . basename(dirname($base)));
 	}
 }
 
