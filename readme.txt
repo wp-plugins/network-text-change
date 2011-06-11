@@ -28,8 +28,6 @@ Here are some of the features you'll get in the premium version available on WPM
 
 * Unlimited number of generated text rules.
 
-<a href='http://premium.wpmudev.org/project/site-wide-text-change'>**Upgrade to the full version now &raquo;**</a>
-
 == Installation ==
 = To Install: =
 
@@ -42,7 +40,7 @@ Here are some of the features you'll get in the premium version available on WPM
 *  You can find <a href='http://premium.wpmudev.org/project/site-wide-text-change/installation/'>in-depth setup and usage instructions with screenshots here &raquo;</a> 
 
 == Screenshots ==
-1. Admin Screen
+
 
 
 
