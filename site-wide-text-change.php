@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name:Site Wide Text Change Lite
-Version: 2.0.2
+Version: 2.0.3
 Plugin URI: http://premium.wpmudev.org/project/site-wide-text-change
 Description: Would you like to be able to change any wording, anywhere in the entire admin area on your whole site? Without a single hack? Well, if that's the case then this plugin is for you!
 Author: Barry at caffeinatedb.com, Ulrich Sossou (incsub)
@@ -71,7 +71,7 @@ class Site_Wide_Text_Change {
 	function __construct() {
 		add_action('admin_init', array(&$this, 'add_admin_header_sitewide'));
 
-		add_action( 'admin_menu', array( &$this, 'pre_3_1_network_admin_page' ) );
+		add_action( 'admin_menu', array( &$this, 'admin_page' ) );
 		add_action( 'network_admin_menu', array( &$this, 'network_admin_page' ) );
 
 		add_filter('gettext', array(&$this, 'replace_text'), 10, 3);
@@ -139,10 +139,11 @@ class Site_Wide_Text_Change {
 	}
 
 	/**
-	 * Add network admin page the old way
+	 * Add admin page for single site installs.
 	 **/
-	function pre_3_1_network_admin_page() {
-		add_submenu_page( 'ms-admin.php', __( 'Text Change', 'sitewidetext' ), __( 'Text Change', 'sitewidetext' ), 'manage_network_options', 'sitewidetext_admin', array( &$this, 'handle_admin_page' ) );
+	function admin_page() {
+		if (is_multisite()) return false;
+		add_submenu_page( 'options-general.php', __( 'Text Change', 'sitewidetext' ), __( 'Text Change', 'sitewidetext' ), 'manage_options', 'sitewidetext_admin', array( &$this, 'handle_admin_page' ) );
 	}
 
 	/**
@@ -428,6 +429,8 @@ class Site_Wide_Text_Change {
 	 * Replace text
 	 **/
 	function replace_text( $transtext, $normtext, $domain ) {
+		if (isset($_GET['page']) && 'sitewidetext_admin' == $_GET['page']) return $transtext;
+
 		$tt = $this->get_translation_ops();
 
 		if( !is_array( $tt ) )
