@@ -2,7 +2,7 @@
 Contributors: WPMUDEV, VeBailovity
 Tags: text change, rebrand, edit text, admin area, backend, buddypress plugin, wpmu, rebranding, buddypress, multisite
 Requires at least: 3.1
-Tested up to: 3.1.2
+Tested up to: 3.9
 Stable tag: 2.0.3
 
 Enables you to change every single piece of translated text in your admin area.

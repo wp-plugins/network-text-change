@@ -488,4 +488,4 @@ class Site_Wide_Text_Change {
 }
 
 if( is_admin() )
-	$swtc =& new Site_Wide_Text_Change();
+	$swtc = new Site_Wide_Text_Change();
