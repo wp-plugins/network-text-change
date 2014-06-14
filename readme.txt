@@ -1,6 +1,6 @@
 === Custom Admin Text Change ===
 Contributors: WPMUDEV, VeBailovity
-Tags: text change, rebrand, edit text, admin area, backend, buddypress plugin, wpmu, rebranding, buddypress, multisite
+Tags: text change, rebrand, edit text, admin area, backend, WPMU, WPMU DEV, rebranding, BuddyPress, multisite, Branding, Admin Text Change, Text Change, Text Domain, Network 
 Requires at least: 3.1
 Tested up to: 3.9
 Stable tag: 2.0.3
