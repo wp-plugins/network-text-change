@@ -1,8 +1,8 @@
 === Custom Admin Text Change ===
-Contributors: WPMUDEV, VeBailovity
+Contributors: WPMUDEV
 Tags: text change, rebrand, edit text, admin area, backend, WPMU, WPMU DEV, rebranding, BuddyPress, multisite, Branding, Admin Text Change, Text Change, Text Domain, Network 
 Requires at least: 3.1
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: 2.0.3
 
 Enables you to change every single piece of translated text in your admin area.
